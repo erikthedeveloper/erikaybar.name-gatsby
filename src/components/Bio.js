@@ -31,12 +31,9 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in St.
-              George, UT building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              <strong>{author}</strong> is a software person working remotely
+              from St. George, Utah. He works mostly with Javascript, React, and
+              React Native. He enjoys coffee.
             </p>
           </div>
         )
