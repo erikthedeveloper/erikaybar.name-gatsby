@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `PG Dev Log`,
+    title: `Erik Aybar`,
     author: `Erik Aybar`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `My Gatsby site where I write about things.`,
     siteUrl: `http://localhost:8000/`,
     social: {
       twitter: `erikaybar_`,
