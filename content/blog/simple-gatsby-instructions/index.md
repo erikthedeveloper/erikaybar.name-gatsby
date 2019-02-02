@@ -1,6 +1,6 @@
 ---
 title: 'Simple Instructions to Try Gastby, Fast'
-date: '2018-02-01 12:00:00'
+date: '2018-02-01T12:00:00'
 ---
 
 If you want to give Gatsby a quick test run, I promise you can have a site just like this up and running in seconds.
