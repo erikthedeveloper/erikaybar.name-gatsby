@@ -7,6 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "new-post": "node ./scripts/new-post.js",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier 'src/**/*.js' 'src/**/*.md' --write"
