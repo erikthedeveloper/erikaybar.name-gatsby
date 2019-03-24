@@ -1,5 +1,6 @@
 import Typography from 'typography'
 import Theme from 'typography-theme-moraga'
+import '../styles/code-syntax-night-owl.css'
 
 const typography = new Typography(Theme)
 
