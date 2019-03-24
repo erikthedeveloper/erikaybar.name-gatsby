@@ -14,7 +14,7 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              marginBottom: rhythm(1),
             }}
           >
             <Image
@@ -31,9 +31,9 @@ function Bio() {
               }}
             />
             <p>
-              <strong>{author}</strong> is a software person working remotely
-              from St. George, Utah. He works mostly with Javascript, React, and
-              React Native. He enjoys coffee.
+              👋🏽 Hi! I'm Erik. I'm a software person working remotely from St.
+              George, Utah. This is my blog. You can also find me at{' '}
+              <a href="https://twitter.com/erikaybar_">@erikaybar_</a>.
             </p>
           </div>
         )
