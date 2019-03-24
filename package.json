@@ -38,7 +38,7 @@
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typography": "0.16.19",
-    "typography-theme-wordpress-2016": "0.16.19"
+    "typography-theme-moraga": "0.16.19"
   },
   "devDependencies": {
     "date-fns": "1.30.1",

@@ -2298,7 +2298,7 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
-compass-vertical-rhythm@^1.4.5:
+compass-vertical-rhythm@^1.2.1, compass-vertical-rhythm@^1.4.5:
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/compass-vertical-rhythm/-/compass-vertical-rhythm-1.4.5.tgz#4baa8d7068fda164d3675d706775d7547e8750f5"
   dependencies:
@@ -10066,11 +10066,12 @@ typography-normalize@^0.16.19:
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.19.tgz#58e0cf12466870c5b27006daa051fe7307780660"
   integrity sha512-vtnSv/uGBZVbd4e/ZhZB9HKBgKKlWQUXw74+ADIHHxzKp27CEf8PSR8TX1zF2qSyQ9/qMdqLwXYz8yRQFq9JLQ==
 
-typography-theme-wordpress-2016@0.16.19:
+typography-theme-moraga@0.16.19:
   version "0.16.19"
-  resolved "https://registry.yarnpkg.com/typography-theme-wordpress-2016/-/typography-theme-wordpress-2016-0.16.19.tgz#de2ecf20fc4f51db9ca2b149a731d31d8ca9c9ab"
-  integrity sha512-J7AWs8mHQyCtAzvhTs1QcAuzv1QoYsue0xw5U430fBxUystWLQba9OphcycFshgDbm6B/k5ge0d4feYp9xOJ2A==
+  resolved "https://registry.yarnpkg.com/typography-theme-moraga/-/typography-theme-moraga-0.16.19.tgz#275238a92d08d540f937b8d38590ebfb7b22d858"
+  integrity sha512-POIMoW6xqRTGeBtT0cbrrzL+eKj7Z+A+Wzu5kvtgJFY7lZ7KA9TcJBB2YuspLd2yHq5YMxiUBDQiHedb19ttww==
   dependencies:
+    compass-vertical-rhythm "^1.2.1"
     gray-percentage "^2.0.0"
     typography-breakpoint-constants "^0.16.19"
 
