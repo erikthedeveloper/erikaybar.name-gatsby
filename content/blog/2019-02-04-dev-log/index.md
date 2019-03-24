@@ -1,7 +1,7 @@
 ---
 date: 2019-02-04
 title: Dev Log 2019-02-04
-published: true
+published: false
 ---
 
 Today was a mixed bag.
@@ -10,7 +10,7 @@ Today was a mixed bag.
 
 I've grown to prefer the `createReducer` version of Redux reducers over `switch` statements. This has helped us greatly simplify. I've been struggling to get Flow types where I'd like them to be though. What would I like?
 
-```flow js
+```js
 // @flow
 // redux/pods/some-pod.js
 
