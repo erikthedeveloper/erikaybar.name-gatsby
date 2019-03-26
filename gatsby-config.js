@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Erik Aybar`,
     author: `Erik Aybar`,
-    description: `My Gatsby site where I write about things.`,
-    siteUrl: `http://localhost:8000/`,
+    description: `This is my personal website and blog where I write about things. Mostly focused around frontend software development, Javascript, React, and working remotely. Also other things though too.`,
+    siteUrl: `https://erikaybar.netlify.com`,
     social: {
       twitter: `erikaybar_`,
     },
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Erik Aybar's Blog`,
+        short_name: `Erik Aybar`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
