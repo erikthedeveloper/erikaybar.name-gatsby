@@ -1,19 +1,69 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
+  env: {
+    browser: true,
+    es6: true,
+    commonjs: true,
+    jest: true,
   },
-  "plugins": [
-    "react",
-  ],
-  "globals": {
-    "graphql": false,
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "ecmaVersion": 2018,
-      "jsx": true,
+  parser: 'babel-eslint',
+  settings: {
+    react: {
+      createClass: 'createReactClass',
+      pragma: 'React',
+      version: '16.8.5',
     },
-  }
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: ['react'],
+  rules: {
+    'dot-notation': 2,
+    eqeqeq: 2,
+    'no-const-assign': 2,
+    'no-debugger': 'error',
+    'no-dupe-keys': 2,
+    'no-func-assign': 2,
+    'no-implicit-coercion': 2,
+    'no-lonely-if': 2,
+    'no-param-reassign': 2,
+    'no-unreachable': 2,
+    'no-unused-vars': [2, {ignoreRestSiblings: true}],
+    'no-var': 2,
+    'object-shorthand': 2,
+    'prefer-const': 2,
+    'react/jsx-key': 2,
+    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-no-undef': 2,
+    'react/jsx-uses-react': 2,
+    'react/jsx-uses-vars': 1,
+    'react/no-deprecated': 2,
+    'react/no-did-mount-set-state': 2,
+    'react/no-did-update-set-state': 2,
+    'react/no-direct-mutation-state': 2,
+    'react/no-unknown-property': 1,
+    'react/react-in-jsx-scope': 2,
+    'react/self-closing-comp': 2,
+    'react/sort-comp': [
+      2,
+      {
+        order: [
+          'static-methods',
+          'type-annotations',
+          'instance-variables',
+          'lifecycle',
+          'everything-else',
+          '/^(on|handle).+$/',
+          '/^render.+$/',
+          'render',
+        ],
+      },
+    ],
+    radix: 2,
+    yoda: 2,
+  },
 }
