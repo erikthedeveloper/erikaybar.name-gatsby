@@ -25,6 +25,7 @@ fs.writeFileSync(
 slug: ${slug}
 date: ${date}
 title: "${title}"
+tags: []
 published: false
 ---
 
