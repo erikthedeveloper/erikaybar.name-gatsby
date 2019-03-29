@@ -182,3 +182,5 @@ And that's about it! You should now have basic tagging set up and be able to:
 - [x] Add tags to posts via frontmatter
 - [x] See what tags a post has when viewing the post
 - [x] View posts filtered by a specific tag at `/tags/:tag`
+
+📝 For a full diff, see the related pull request here: [Implement frontmatter.tags and "/tags/:tag" pages](https://github.com/erikthedeveloper/erikaybar.name-gatsby/pull/1)
