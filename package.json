@@ -13,6 +13,7 @@
     "format": "prettier 'src/**/*.js' 'src/**/*.md' --write"
   },
   "dependencies": {
+    "esm": "3.2.22",
     "gatsby": "2.2.9",
     "gatsby-image": "2.0.34",
     "gatsby-plugin-feed": "2.1.0",
