@@ -3,7 +3,7 @@ import {Link, graphql} from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import {rhythm, scale} from '../utils/typography'
+import {rhythm} from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,18 +14,14 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
+        <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
+        <small>{post.frontmatter.date}</small>
+        <div
           style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(1),
           }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{__html: post.html}} />
+          dangerouslySetInnerHTML={{__html: post.html}}
+        />
         <AdjacentPosts previous={previous} next={next} />
         <hr
           style={{
