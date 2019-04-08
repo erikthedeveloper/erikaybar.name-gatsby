@@ -1,7 +1,8 @@
 ---
 date: 2019-02-04
 title: Dev Log 2019-02-04
-published: false
+published: true
+tags: ['dev-log']
 ---
 
 Today was a mixed bag.

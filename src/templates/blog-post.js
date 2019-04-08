@@ -4,6 +4,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import {rhythm} from '../utils/typography'
+import {TagsList} from '../components/TagsList'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
+        <TagsList tags={post.frontmatter.tags} />
         <div
           style={{
             marginTop: rhythm(1),
@@ -91,6 +93,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
       }
     }
   }

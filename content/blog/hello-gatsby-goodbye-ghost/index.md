@@ -1,6 +1,7 @@
 ---
 title: 'Hello Gatsby, Goodbye Ghost.'
 date: '2018-02-01'
+tags: ['gatsby']
 ---
 
 I've been using [Gatsby](https://www.gatsbyjs.org/) for my local, private dev log which has been useful for logging accomplishments and victories at work. I've really been impressed with Gatsby and my current site http://erikaybar.name/ (run on [Ghost](https://ghost.org/)) has been long overdue for a rework. I've been wanting to dive deeper with Gatsby and get a fresh start on blogging.

@@ -2,7 +2,7 @@
 slug: wrapping-up-my-gatsby-site-1-dot-0
 date: 2019-03-24
 title: 'Wrapping up My Gatsby Site 1.0'
-published: true
+tags: ['gatsby']
 ---
 
 I've been dabbling with Gatsby, but also wanting to get back into the swing of writing and get a fresh site up. Time to wrap this up!

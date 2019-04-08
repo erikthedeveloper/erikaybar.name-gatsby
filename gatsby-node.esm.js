@@ -1,5 +1,6 @@
 const path = require(`path`)
 const {createFilePath} = require(`gatsby-source-filesystem`)
+const {tagToPath} = require('./src/utils/paths')
 
 exports.createPages = ({graphql, actions}) => {
   const {createPage} = actions
@@ -20,6 +21,7 @@ exports.createPages = ({graphql, actions}) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
           }
@@ -47,6 +49,29 @@ exports.createPages = ({graphql, actions}) => {
           next,
         },
       })
+    })
+
+    createTagsPages({posts, createPage})
+  })
+}
+
+function createTagsPages({posts, createPage}) {
+  const tagPage = path.resolve(`./src/templates/TagPage.js`)
+
+  // Build up list of unique tags
+  const allTags = new Set()
+  posts.forEach(({node: {frontmatter: {tags}}}) => {
+    if (!Array.isArray(tags)) return
+    tags.forEach(tag => allTags.add(tag))
+  })
+
+  allTags.forEach(tag => {
+    createPage({
+      path: tagToPath(tag),
+      component: tagPage,
+      context: {
+        tag,
+      },
     })
   })
 }
