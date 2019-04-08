@@ -2,7 +2,7 @@
 slug: adding-tags-to-a-gatsby-blog
 date: 2019-03-29
 title: 'Adding tags to a Gatsby blog'
-tags: ['gatsby', 'quick-tips']
+tags: ['gatsby']
 ---
 
 Before migrating my existing posts over from Ghost, I needed to implement tags on this Gatsby blog. Fortunately, the Gatsby docs once again have a great guide for exactly this: [Creating Tags Pages for Blog Posts](https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/).
