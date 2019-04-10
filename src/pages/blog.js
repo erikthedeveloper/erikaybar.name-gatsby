@@ -1,25 +1,21 @@
 import React from 'react'
-import {graphql, Link} from 'gatsby'
+import {graphql} from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import {PostsList} from '../components/PostsList'
 
-export default function HomePage(props) {
+export default function BlogPage(props) {
   const {data} = props
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="Welcome"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
-      <Bio isHero />
-      <h2>Some Recent Thoughts...</h2>
+      <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <h1>All The Thoughts...</h1>
       <PostsList posts={posts} />
-      <Link to="/blog">View all...</Link>
+      <Bio />
     </Layout>
   )
 }
@@ -34,7 +30,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: {fields: [frontmatter___date], order: DESC}
       filter: {frontmatter: {published: {ne: false}}}
-      limit: 5
     ) {
       edges {
         node {
