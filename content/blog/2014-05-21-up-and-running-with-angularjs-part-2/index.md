@@ -55,7 +55,7 @@ First things first, get the above installed, up, and running.
 
 Now let's get a glimpse of the magic that Yeoman provides us.
 
-```language-bash
+```bash
 $ yo angular TodoYoAngular
 ```
 
@@ -63,7 +63,7 @@ $ yo angular TodoYoAngular
 
 Looking a bit closer at what just happened, we can see Yeoman generated quite a few files for us
 
-```language-bash
+```bash
 $ tree -L 2 -I node_module*
 
 ├── Gruntfile.js

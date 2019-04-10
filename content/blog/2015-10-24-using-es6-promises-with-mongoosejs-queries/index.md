@@ -9,7 +9,7 @@ tags: ["node.js", "ES6+"]
 
 **Using callbacks**
 
-```language-javascript
+```javascript
 someMongooseModel.find(someInput, function(err, results) {
   if (err) {
     panic(err);
@@ -23,7 +23,7 @@ someMongooseModel.find(someInput, function(err, results) {
 
 **Using Promises**
 
-```language-javascript
+```javascript
 someMongooseModel.find(someInput)
   .catch(panic)
   .then(doSomething);
@@ -31,7 +31,7 @@ someMongooseModel.find(someInput)
 
 Making use of the actual native `Promise` that ES6 provides, requires very little setup thanks to Mongoose exposing `mongoose.Promise`
 
-```language-javascript
+```javascript
 // Set mongoose.Promise to any Promise implementation
 mongoose.Promise = Promise;
 ```

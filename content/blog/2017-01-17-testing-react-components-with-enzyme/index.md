@@ -21,7 +21,7 @@ It can be hard enough breaking into testing in general. Getting started with tes
 
 With Enzyme you can write tests that look like
 
-```language-javascript
+```javascript
 import React from 'react'
 import expect from 'expect'
 import {shallow} from 'enzyme'

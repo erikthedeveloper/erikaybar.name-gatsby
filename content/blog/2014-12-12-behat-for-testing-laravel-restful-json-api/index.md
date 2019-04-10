@@ -36,7 +36,7 @@ Some items to take note of from above.
 
 Following are some snippets from our `muffins.feature`.
 
-```language-gherkin
+```gherkin
 
 Background:
   Given there are 7 "Muffin"s
@@ -89,7 +89,7 @@ Using [Gherkin](http://docs.behat.org/en/latest/guides/1.gherkin.html), allows u
 
 Explanation using above examples...
 
-```language-gherkin
+```gherkin
 # Let's seed some data!
 Given there are 7 "Muffin"s
 # Specificy some attributes on a specific model
@@ -101,7 +101,7 @@ And the "Muffin" with id 3 has attributes:
 
 And to define these two steps from above...
 
-```language-php
+```php
 // ApiFeatureContext.php
 
 /**
@@ -143,7 +143,7 @@ Until next time...
 
 And detecting the testing environment for HTTP requests within my `bootstrap/start.php`
 
-```language-php
+```php
 $env = $app->detectEnvironment( function () {
     if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'behat-api.test')
         return 'testing';

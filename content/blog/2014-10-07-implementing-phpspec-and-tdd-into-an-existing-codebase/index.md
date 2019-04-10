@@ -36,7 +36,7 @@ And of course the GitHub repo: https://github.com/erikthedeveloper/a-bit-of-fun-
 
 ### And for some code to sum it all up :)
 
-```language-php
+```php
 
 <?php
 // Old/Current behavior vs. New/Desired behavior
@@ -72,7 +72,7 @@ $this->validate($rules, $data)
 
 The Tests look a bit like this (actually.. this is the test suite in its entirety ;))
 
-```language-php
+```php
 <?php
 
 // ValidatorSpec.php

@@ -27,7 +27,7 @@ Install the required dependencies. In addition to Behat the composer packages re
 
 Note that GuzzleHttp is part of the `require` rather than `require-dev`. We do have some plans to use it to consume 3rd party APIs.
 
-```language-javascript
+```javascript
 /*
 ...
 */
@@ -60,7 +60,7 @@ Note that GuzzleHttp is part of the `require` rather than `require-dev`. We do h
 
 I began by writing out the feature. http://docs.behat.org/guides/1.gherkin.html
 
-```language-php
+```php
 Feature: Basic API Routes
     In order to interact with my application from the front end
     As a front end developer with no knowledge of API wizardry
@@ -74,7 +74,7 @@ Feature: Basic API Routes
 
 
 #### FeatureContext.php
-```language-php
+```php
 <?php
 
 use Behat\Behat\Context\ClosuredContextInterface,
@@ -149,7 +149,7 @@ class FeatureContext extends BehatContext
 ```
 
 #### routes.php
-```language-php
+```php
 <?php
 
 Route::get('/', function()

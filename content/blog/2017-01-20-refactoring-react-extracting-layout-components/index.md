@@ -19,7 +19,7 @@ Another example I find useful is a `Button` component that takes care of applyin
 
 It could apply all the Bootstrap-specific CSS classes, HTML attributes, and even [appropriately render a `<button>` OR a `<a>` ](https://v4-alpha.getbootstrap.com/components/buttons/#button-tags) to enable using `href` with the same button component. It could allow usages such as:
 
-```language-javascript
+```javascript
 const SomeButtons = ({someAction}) => (
   <div>
     <Button onClick={someAction}>Click Me</Button>
@@ -46,7 +46,7 @@ That could enable any combination of the [supported Bootstrap button examples](h
 
 Example implementation _*100% untested :)_
 
-```language-javascript
+```javascript
 // some/path/components/Button.js
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
@@ -163,7 +163,7 @@ Ultimately breaking it down into smaller pieces of UI such as:
 
 To get a feel of what I mean by a bloated render function, take a look at this **before**. Notice the giant blob which is `.MonthGrid` and everything nested under it.
 
-```language-javascript
+```javascript
 // import ...
 
 class Calendar extends React.Component {
@@ -212,7 +212,7 @@ class Calendar extends React.Component {
 Cleaning this up a bit, I end up extracting 2 components `Day`, and `MonthGrid`. `MonthGrid` handles all of the layout-specific logic and DOM, while `Day` exposes an API that we can build on (as seen here: https://github.com/erikthedeveloper/react-calendar-components).
 
 
-```language-javascript
+```javascript
 // import ...
 import MonthGrid from '../MonthGrid';
 import Day from '../Day';

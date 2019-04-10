@@ -51,7 +51,7 @@ As I began writing this, I realized that there is so much to possibly cover when
 
 Proper Branching
 
-```language-bash
+```bash
 master # Only affected through PRs on origin
 develop
 feature/foo_a
@@ -62,7 +62,7 @@ bugfix/baz_c
 
 Merging and Rebasing
 
-```language-bash
+```bash
 git checkout develop
 git pull --rebase
 git checkout feature/foo_b
@@ -75,7 +75,7 @@ git push origin feature/foo_b
 
 diff/log branches
 
-```language-bash
+```bash
 # Show differences between working HEAD (or branch) and another branch. Add the '-p' option for patch info
 git diff HEAD --not develop --stat
 

@@ -102,7 +102,7 @@ Also
 
 To add the spacers to your OS X dock ...
 
-```language-bash
+```bash
 # Do this twice
 defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
 # and then..

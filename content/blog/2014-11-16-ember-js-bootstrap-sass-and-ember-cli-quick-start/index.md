@@ -21,7 +21,7 @@ Recommended: Head on over the my [Ember.js w/ Bootstrap (SASS) Example App](http
 
 _At the time of this writing:_
 
-```language-bash
+```bash
 # Clone the repo and change directories
 git clone https://github.com/erikthedeveloper/emberjs-bootstrap3-starter-app.git MyEmberApp && cd MyEmberApp
 # Because we never work/commit on master ... right? ;)
@@ -70,7 +70,7 @@ I've found I have a much better time (and would recommend you take this route) u
 
 Their [quick install instructions](https://github.com/creationix/nvm#install-script) are pretty straightforward. Just make sure to set `stable` as your `default` `alias`.
 
-```language-bash
+```bash
 # Download and setup nvm
 curl https://raw.githubusercontent.com/creationix/nvm/v0.18.0/install.sh | bash
 
@@ -85,7 +85,7 @@ which npm
 
 ##### Install [ember-cli](http://www.ember-cli.com/) and [bower](http://bower.io/)
 
-```language-bash
+```bash
 npm install -g ember-cli
 npm install -g bower
 ```
@@ -94,7 +94,7 @@ npm install -g bower
 
 ### Step 1: Scaffold Default Ember App via `ember-cli`
 
-```language-bash
+```bash
 $ ember new my-first-ember-app
 $ cd my-first-ember-app
 $ ember server
@@ -112,7 +112,7 @@ Some blurb here... Yay! ember-cli so great...
 
 
 
-```language-bash
+```bash
 $ ember generate template login
 ```
 
@@ -120,7 +120,7 @@ Declare the route in your `router.js` for `"/login"`
 
 
 
-```language-javascript
+```javascript
 // app/router.js - Router.map
 Router.map(function() {
   this.route('login');
@@ -130,7 +130,7 @@ Router.map(function() {
 **And for good measure,** let's throw in some Bootstrap specific markup so we can verify that the Bootstrap 3 assets (including glyphicons/fonts) are setup correctly.
 
 
-```language-markup
+```html
 // app/templates/login.hbs
 <!-- Note: this is vanilla HTML. TODO: Emberify!-->
 <h2>Login</h2>
@@ -155,7 +155,7 @@ Router.map(function() {
 ```
 ### Step 3: Add Dependencies for Bootstrap and SASS
 
-```language-bash
+```bash
 $ bower install --save-dev bootstrap-sass-official
 $ npm install --save-dev broccoli-sass
 ```
@@ -167,14 +167,14 @@ $ npm install --save-dev broccoli-sass
 
 
 
-```language-javascript
+```javascript
 // Brocfile.js
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 ```
 
 **Rename `app.css` to `app.scss`**
 
-```language-bash
+```bash
 mv app/styles/app.css app/styles/app.scss
 ```
 
@@ -194,7 +194,7 @@ Some blurb here....
 
 
 
-```language-javascript
+```javascript
 // Brocfile.js
 app.import('bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyphicons-halflings-regular.woff', {
   destDir: 'fonts/bootstrap/'
@@ -207,7 +207,7 @@ app.import('bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyp
 
 
 
-```language-scss
+```scss
 // bootstrap_imports.scss
 
 // Our custom variables

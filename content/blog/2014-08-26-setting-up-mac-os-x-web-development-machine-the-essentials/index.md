@@ -78,7 +78,7 @@ WIP ...
 
 **Installing node.js with nvm from start to finish in 3 steps**
 
-```language-bash
+```bash
 # 1.) Install instructions per the nvm github install instructions... One liner!
 ➜  ~  curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -100,7 +100,7 @@ Now using node v0.10.30
 /Users/erikaybar/.nvm/v0.10.30/bin/node
 ```
 
-```language-bash
+```bash
 nvm alias default 0.10
 ```
 
@@ -152,7 +152,7 @@ To install the homestead Vagrant box: `vagrant box add laravel/homestead` (this 
 
 https://getcomposer.org/doc/00-intro.md#globally
 
-```language-bash
+```bash
 curl -sS https://getcomposer.org/installer | php
 # For global installation
 mv composer.phar /usr/local/bin/composer
@@ -174,7 +174,7 @@ Until I feel ready to take this on... a bullet list will have to suffice. Runnin
 
 `brew` [Homebrew - Brew.sh](http://brew.sh/)
 
-```language-bash
+```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 

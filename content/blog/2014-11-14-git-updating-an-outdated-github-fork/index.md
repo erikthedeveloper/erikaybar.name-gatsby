@@ -25,7 +25,7 @@ For this post we will assume a few things:
 
 ## The Short Version
 
-```language-bash
+```bash
 $ git remote add source git@github.com:owner/some_great_repo.git
 $ git fetch source
 # Hopefully fast forward (via "--ff-only")
@@ -48,7 +48,7 @@ $ git push
 
 This enables you to pull/fetch from the original source repository on GitHub. This allows you to compare your fork (origin) with the source (source)
 
-```language-bash
+```bash
 # Display all remotes currently set up (you will likely only have "origin")
 $ git remote -v
 origin  git@github.com:myusername/some_great_repo.git (fetch)
@@ -65,7 +65,7 @@ source  git@github.com:owner/some_great_repo.git (push)
 
 ### Fetch the newly added remote ("source")
 
-```language-bash
+```bash
 # This will fetch the source repository allowing you to examine/interact with it
 $ git fetch source
 remote: Counting objects: 20, done.
@@ -78,7 +78,7 @@ From github.com:owner/some_great_repo
 
 ### You probably want to examine the diff/log...
 
-```language-bash
+```bash
 $ git log develop...source/develop
 $ git diff develop...source/develop
 # List all branches (including remotes "-a")
@@ -93,7 +93,7 @@ $ git branch -a
 
 Assuming a fast forward is possible, do this. Otherwise you will need to rebase/merge and possibly resolve any conflicts which is a whole topic on its own.
 
-```language-bash
+```bash
 $ git checkout develop
 $ git merge --ff-only source/develop
 Updating 22c5306..859b79c
@@ -104,7 +104,7 @@ Fast-forward
 
 ### Push to update your fork
 
-```language-bash
+```bash
 # Same as: "git push origin develop"
 $ git push
 Counting objects: 24, done.

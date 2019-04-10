@@ -11,6 +11,6 @@ I've been working 100% remotely for ~2.5 years now. I was _sort of_ remote for a
 
 This is a topic that I have many thoughts on...
 
-```language-javascript
+```javascript
 // TODO: Write more about remote work
 ```

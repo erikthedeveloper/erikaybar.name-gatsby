@@ -51,7 +51,7 @@ I am by no means going to cover from ground up development environment setup, in
 * Your ~~IDE~~ weapon of choice (which of course is Sublime Text :) )
 
 However once your initial dev machine is setup it really just boils down to this:
-```
+```bash
 sudo npm -g install sails
 sails new testProject
 cd testProject
@@ -71,7 +71,7 @@ sails lift
 Think of this as your data. These files are located in the `ProjectName/api/models` directory
 
 ##### Model: ChatRoom
-```
+```javascript
 // ProjectName/api/models/ChatRoom.js
 /**
  * ChatRoom
@@ -102,7 +102,7 @@ module.exports = {
 ```
 
 ##### Model: StatusUpdate
-```
+```javascript
 // ProjectName/api/models/StatusUpdate.js
 /**
  * StatusUpdate
@@ -176,7 +176,7 @@ Sounds simple enough right?
 * Controllers
 
 #### Routes
-```
+```javascript
 // routes.js
 
 module.exports.routes = {
@@ -206,7 +206,7 @@ Of course: [Link to SailsCall Demo](http://sailscall.erikaybar.name/chat/from-bl
 
 Want to run it yourself? Just remember (roughly)
 
-```
+```bash
 git clone
 cd ProjectDirectory
 npm install

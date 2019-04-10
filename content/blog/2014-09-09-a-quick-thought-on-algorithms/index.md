@@ -17,7 +17,7 @@ This is a fairly trivial example showing the performance difference between seve
 
 **with 1,000 items...**
 
-```language-bash
+```bash
 - - - - - - - - - - The BubbleSorter
 Sort Success: True
 List Size: 1,000
@@ -57,7 +57,7 @@ No compare/swap data available
 
 **and with 10,000 items...**
 
-```language-bash
+```bash
 - - - - - - - - - - The BubbleSorter
 Sort Success: True
 List Size: 10,000
@@ -105,7 +105,7 @@ Now imagine a list of size 1,000,000 ... 1,000,000,000 ... well, you get the pic
 
 Of course I had to leave the lesser performing Algorithms out of this example such as Bubble Sort, Shaker Sort, and Selection Sort since I do not have a spare 30 years or so to stick around and find out the results ;)
 
-```language-bash
+```bash
 - - - - - - - - - - The MergeSorter
 Sort Success: True
 List Size: 10,000,000

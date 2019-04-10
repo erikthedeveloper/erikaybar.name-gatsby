@@ -24,7 +24,7 @@ I thought not. Hence Composer.
 #### Install Composer
 First, we need to install composer. This is an extremely simple process outlined in [The Composer Docs](https://getcomposer.org/doc/00-intro.md#globally). I recommend following the global installation instructions so you can use the command in any project/directory
 
-```language-bash
+```bash
 $ curl -sS https://getcomposer.org/installer | php
 $ mv composer.phar /usr/local/bin/composer
 $ # Yes... that is all :)
@@ -32,7 +32,7 @@ $ # Yes... that is all :)
 
 #### Setup our development directory
 
-```language-bash
+```bash
 mkdir OurDirectory; cd OurDirectory
 git init
 touch README.md
@@ -53,7 +53,7 @@ We could do this all manually... in fact, since it is so simple, we will. Just k
 In our project's root, we will create a `composer.json` file that looks something like this...
 
 **composer.json**
-```language-javascript
+```javascript
 {
     "autoload": {
 

@@ -28,7 +28,7 @@ The **bare essentials** for those who have yet to lay eyes on AngularJS code...
 
 Here is the code in its entirety...
 
-```language-markup
+```html
 <!doctype html>
 <html lang="en">
 <head>

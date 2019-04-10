@@ -16,12 +16,12 @@ Short version:
 - Do **NOT** provide CLI flags such as `-d` or `-p`
 
 Run command such as:
-```language-bash
+```bash
 webpack
 ```
 
 With a `webpack.config.js` such as:
-```language-javascript
+```javascript
 const config = {
   // ...
   devtool: 'source-map',
@@ -63,7 +63,7 @@ _REMEMBER: DO NOT MIX AND MATCH CLI FLAGS WITH CONFIG FOR `devtool` THE CLI FLAG
 
 Example:
 
-```language-javascript
+```javascript
 const config = {
   // ...
   devtool: 'source-map',
