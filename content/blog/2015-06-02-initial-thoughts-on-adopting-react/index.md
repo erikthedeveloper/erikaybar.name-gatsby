@@ -31,7 +31,7 @@ Personally, that this was initially one of the biggest selling points for me and
 
 Here is a contrived side-by-side. You can easily imagine how a more complex "without JSX" example might look. Not to say it can't be done, but I see no reason to shed JSX in favor of "purity".
 
-<a class="jsbin-embed" href="http://jsbin.com/zukapi/latest/embed?js">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a href="http://jsbin.com/zukapi/latest?js">JS Bin</a>
 
 ## ES6 (ES2015)
 
