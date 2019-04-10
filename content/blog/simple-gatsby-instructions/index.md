@@ -1,6 +1,6 @@
 ---
 title: 'Simple Instructions to Try Gastby, Fast'
-date: '2018-02-01T12:00:00'
+date: '2019-02-01T12:00:00'
 tags: ['gatsby']
 ---
 
