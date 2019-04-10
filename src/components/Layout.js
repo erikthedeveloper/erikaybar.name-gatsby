@@ -42,12 +42,12 @@ class Layout extends React.Component {
         {children}
         <footer>
           <small>
-            © {new Date().getFullYear()}, Built with{' '}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> (view source:{' '}
-            <a href="https://github.com/erikthedeveloper/my-gatsby-site">
-              GitHub repo
+            © {new Date().getFullYear()} Built with{' '}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>, hosted on{' '}
+            <a href="https://www.netlify.com/">Netlify</a>, source on{' '}
+            <a href="https://github.com/erikthedeveloper/erikaybar.name-gatsby">
+              GitHub
             </a>
-            )
           </small>
         </footer>
       </div>
