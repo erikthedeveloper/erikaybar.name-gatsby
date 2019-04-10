@@ -50,7 +50,6 @@ function Bio({isHero}) {
                 ))}
               </Links>
             </div>
-            {isHero && <BottomPointer>👇🏽</BottomPointer>}
           </Outer>
         )
       }}
@@ -164,25 +163,6 @@ const fadeInOut = keyframes`
   }
   100% {
     opacity: 0;
-  }
-`
-
-const BottomPointer = styled.div`
-  position: absolute;
-  opacity: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin-bottom: 15px;
-  text-align: center;
-  font-size: 36px;
-  animation: ${fadeInOut} 5s,
-    ${shake} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  animation-delay: 1s, 3s;
-
-  @media (max-width: 768px) {
-    display: none;
   }
 `
 
