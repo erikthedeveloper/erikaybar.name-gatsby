@@ -7,6 +7,11 @@ migrateGhostToGatsby({
   blogDir: path.join(__dirname, '../content/blog'),
 })
 
+/**
+ * Migrate Ghost 0.x posts to Gatsby posts!
+ * @param json The JSON export from Ghost admin panel
+ * @param blogDir The directory where Gatsby posts live
+ */
 function migrateGhostToGatsby({json, blogDir}) {
   const {data} = json.db[0]
   const {posts, tags, posts_tags} = data
