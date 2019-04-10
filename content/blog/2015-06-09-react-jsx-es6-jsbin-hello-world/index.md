@@ -1,8 +1,8 @@
 ---
-title: "React, JSX, and ES6 example "Hello World" with JSBin in 4 minutes"
+title: 'React, JSX, and ES6 example "Hello World" with JSBin in 4 minutes'
 slug: react-jsx-es6-jsbin-hello-world
-date: "2015-06-09"
-tags: ["javascript", "React"]
+date: '2015-06-09'
+tags: ['javascript', 'React']
 ---
 
 In this short ~4 minute video, I quickly cover how you can easily use [JSBin](http://jsbin.com/) to experiment with [React](http://facebook.github.io/react/) Facebook's UI library and touch on some basics of React component creation, ES6, and JSBin.
