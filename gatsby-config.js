@@ -3,7 +3,7 @@ module.exports = {
     title: `Erik Aybar`,
     author: `Erik Aybar`,
     description: `This is my personal website and blog where I write about things. Mostly focused around frontend software development, Javascript, React, and working remotely. Also other things though too.`,
-    siteUrl: `https://erikaybar.netlify.com`,
+    siteUrl: `https://erikaybar.name`,
     social: {
       twitter: `erikaybar_`,
     },
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-41315772-6`,
+        trackingId: `UA-41315772-1`,
       },
     },
     `gatsby-plugin-feed`,
