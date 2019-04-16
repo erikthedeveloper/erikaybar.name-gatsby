@@ -9,11 +9,10 @@ import {TagsList} from '../components/TagsList'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
     const {previous, next} = this.props.pageContext
 
     return (
-      <Page location={this.props.location} title={siteTitle}>
+      <Page location={this.props.location}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
@@ -80,12 +79,6 @@ function AdjacentPosts({previous, next}) {
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: {slug: {eq: $slug}}) {
       id
       excerpt(pruneLength: 160)

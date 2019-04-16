@@ -2,10 +2,12 @@ import React from 'react'
 import {rhythm} from '../utils/typography'
 import {Header} from './Header'
 import {Footer} from './Footer'
+import {useSiteMetadata} from '../graphql/component-queries'
 
-export default function Page({location, title, children}) {
+export default function Page({location, children}) {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
+  const {title} = useSiteMetadata()
   if (location.pathname !== rootPath) {
     header = <Header title={title} />
   }

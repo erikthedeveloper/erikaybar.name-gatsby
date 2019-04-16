@@ -7,11 +7,10 @@ import {PostsList} from '../components/PostsList'
 
 export default function HomePage(props) {
   const {data} = props
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Page location={props.location} title={siteTitle}>
+    <Page location={props.location}>
       <SEO
         title="Welcome"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -26,11 +25,6 @@ export default function HomePage(props) {
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       sort: {fields: [frontmatter___date], order: DESC}
       filter: {frontmatter: {published: {ne: false}}}

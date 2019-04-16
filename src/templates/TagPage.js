@@ -7,13 +7,10 @@ import SEO from '../components/seo'
 export default function TagPage({
   location,
   pageContext: {tag},
-  data: {
-    allMarkdownRemark,
-    site: {siteMetadata},
-  },
+  data: {allMarkdownRemark},
 }) {
   return (
-    <Page location={location} title={siteMetadata.title}>
+    <Page location={location}>
       <div>
         <SEO title={`Posts tagged "${tag}"`} keywords={[tag]} />
         <h1>Posts Tagged "{tag}"</h1>
@@ -25,11 +22,6 @@ export default function TagPage({
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
       sort: {fields: [frontmatter___date], order: DESC}
