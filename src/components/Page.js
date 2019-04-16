@@ -3,7 +3,7 @@ import {rhythm} from '../utils/typography'
 import {Header} from './Header'
 import {Footer} from './Footer'
 
-export default function Layout({location, title, children}) {
+export default function Page({location, title, children}) {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
   if (location.pathname !== rootPath) {

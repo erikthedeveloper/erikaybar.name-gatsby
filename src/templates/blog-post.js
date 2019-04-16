@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 import Bio from '../components/Bio'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 import SEO from '../components/seo'
 import {rhythm} from '../utils/typography'
 import {TagsList} from '../components/TagsList'
@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const {previous, next} = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Page location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
         <small>{post.frontmatter.date}</small>
@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-      </Layout>
+      </Page>
     )
   }
 }

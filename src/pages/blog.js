@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Bio from '../components/Bio'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 import SEO from '../components/seo'
 import {PostsList} from '../components/PostsList'
 
@@ -11,12 +11,12 @@ export default function BlogPage(props) {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Page location={props.location} title={siteTitle}>
       <SEO title="Blog" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <h1>All The Thoughts...</h1>
       <PostsList posts={posts} />
       <Bio />
-    </Layout>
+    </Page>
   )
 }
 

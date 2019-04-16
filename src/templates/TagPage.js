@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 import {PostsList} from '../components/PostsList'
 import SEO from '../components/seo'
 
@@ -13,13 +13,13 @@ export default function TagPage({
   },
 }) {
   return (
-    <Layout location={location} title={siteMetadata.title}>
+    <Page location={location} title={siteMetadata.title}>
       <div>
         <SEO title={`Posts tagged "${tag}"`} keywords={[tag]} />
         <h1>Posts Tagged "{tag}"</h1>
         <PostsList posts={allMarkdownRemark.edges} />
       </div>
-    </Layout>
+    </Page>
   )
 }
 
