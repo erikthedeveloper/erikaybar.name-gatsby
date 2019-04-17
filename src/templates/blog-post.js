@@ -1,38 +1,36 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Bio from '../components/Bio'
 import Page from '../components/Page'
 import SEO from '../components/seo'
 import {rhythm} from '../utils/typography'
 import {TagsList} from '../components/TagsList'
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const {previous, next} = this.props.pageContext
+function BlogPostTemplate(props) {
+  const post = props.data.markdownRemark
+  const {previous, next} = props.pageContext
 
-    return (
-      <Page location={this.props.location}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.date}</small>
-        <TagsList tags={post.frontmatter.tags} />
-        <div
-          style={{
-            marginTop: rhythm(1),
-          }}
-          dangerouslySetInnerHTML={{__html: post.html}}
-        />
-        <AdjacentPosts previous={previous} next={next} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
-      </Page>
-    )
-  }
+  return (
+    <Page location={props.location}>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <h1 style={{marginBottom: rhythm(0.25)}}>{post.frontmatter.title}</h1>
+      <small>{post.frontmatter.date}</small>
+      <TagsList tags={post.frontmatter.tags} />
+      <div
+        style={{
+          marginTop: rhythm(1),
+        }}
+        dangerouslySetInnerHTML={{__html: post.html}}
+      />
+      <AdjacentPosts previous={previous} next={next} />
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
+      <Bio />
+    </Page>
+  )
 }
 
 export default BlogPostTemplate
