@@ -1,35 +1,27 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 import {PostsList} from '../components/PostsList'
 import SEO from '../components/seo'
 
 export default function TagPage({
   location,
   pageContext: {tag},
-  data: {
-    allMarkdownRemark,
-    site: {siteMetadata},
-  },
+  data: {allMarkdownRemark},
 }) {
   return (
-    <Layout location={location} title={siteMetadata.title}>
+    <Page location={location}>
       <div>
         <SEO title={`Posts tagged "${tag}"`} keywords={[tag]} />
         <h1>Posts Tagged "{tag}"</h1>
         <PostsList posts={allMarkdownRemark.edges} />
       </div>
-    </Layout>
+    </Page>
   )
 }
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
       sort: {fields: [frontmatter___date], order: DESC}
