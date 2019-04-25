@@ -21,6 +21,10 @@ _Update: This post was digested and used throughout my slides from a local JS Me
 [**React 101 by Erik Aybar**
 \_A condensed introduction to the wonderful world of React_slides.com](http://slides.com/erikaybar/react-101 'http://slides.com/erikaybar/react-101')[](http://slides.com/erikaybar/react-101)
 
+<iframe src="//slides.com/erikaybar/react-101/embed?style=light" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+_*I was super impressed with https://slides.com/. This was my first time using it and putting together that presentation was a pleasure!_
+
 Before I get into what React is, how to use it and all of that good stuff, I want to get a few things out of the way. React is not “MVC”. It is not a batteries included framework. It is not ready, out of the box, for you to take a polished web application all the way to the finish line. I see React.js as one critical piece of a larger tech stack that allows you to declaratively define your UI/UX.
 
 > React is a “Javascript Library for Building User Interfaces”
