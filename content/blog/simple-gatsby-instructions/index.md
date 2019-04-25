@@ -1,5 +1,5 @@
 ---
-title: 'Simple Instructions to Try Gastby, Fast'
+title: 'Simple Instructions to Try Gatsby, Fast'
 date: '2019-02-01T12:00:00'
 tags: ['gatsby']
 ---
