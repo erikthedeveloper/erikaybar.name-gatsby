@@ -1,7 +1,7 @@
 ---
 title: 'Optimistic UI Updates in React using component state'
 date: '2019-04-30'
-tags: ['react']
+tags: ['React', 'egghead.io']
 slug: optimistic-ui-updates-in-react-using-component-state
 ---
 

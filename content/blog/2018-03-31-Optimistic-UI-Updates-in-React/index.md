@@ -2,7 +2,7 @@
 title: Optimistic UI Updates in React
 description: "Build snappier, more responsive applications with Optimistic UI Updates… and my 1st egghead.io course! \U0001F389"
 date: '2018-03-31T14:14:41.795Z'
-tags: ['react']
+tags: ['React', 'egghead.io']
 slug: optimistic-ui-updates-in-react
 ---
 

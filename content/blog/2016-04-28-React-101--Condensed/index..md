@@ -4,7 +4,7 @@ description: >-
   I’ve been using and getting to know React pretty heavily for over a year now.
   We have had great success adopting it at work, and I could…
 date: '2016-04-28T18:22:19.747Z'
-tags: ['react']
+tags: ['React']
 slug: condensed-intro-to-react
 ---
 
