@@ -1,8 +1,8 @@
 ---
-title: "Optimistic UI Updates in React (egghead.io course)"
+title: 'Optimistic UI Updates in React (egghead.io course)'
 slug: optimistic-ui-updates-in-react-eggheadio-course
-date: "2018-07-23"
-tags: ["egghead.io", "React"]
+date: '2018-07-23'
+tags: ['egghead.io', 'React']
 ---
 
 It's been out for several months now, but my first [egghead.io](https://egghead.io/) course was recently released 🎉 The course is [Optimistic UI Updates in React](https://egghead.io/courses/optimistic-ui-updates-in-react) where I illustrate by example creating more responsive, snappier user interfaces by leveraging optimistic UI updates specifically with React although the concept applies generally regardless of technologies and frameworks involved.

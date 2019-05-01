@@ -6,19 +6,19 @@ tags: ['react']
 slug: optimistic-ui-updates-in-react
 ---
 
-![](https://cdn-images-1.medium.com/max/800/1*3rOMAH_0Vjq_PvYVn8WTxg.png)
+[![egghead.io course: Optimistic UI Updates with React](../2018-04-15-Loading--and-Optimistic-UI-Updates-in-React-using-Promises-and-setState/egghead-Optimistic-UI-Update-Course.png)](https://egghead.io/courses/optimistic-ui-updates-in-react)
 
 No matter what type of app you’re building, you’re going to need to fetch data, display that data to a user, and enable the user to interact with and update that data. This interaction/updating phase is often asynchronous. This presents you, the developer, an opportunity to provide a range of differing experiences depending on the circumstances.
 
 In certain cases, you can leverage what is known as _optimistic UI updates_ for an improved, snappier user experience as compared to a traditional “loading” experience (further reading: [True Lies Of Optimistic User Interfaces](https://www.smashingmagazine.com/2016/11/true-lies-of-optimistic-user-interfaces/)).
 
+_\*This post is part of 1 of 2. See part 2 here [“Loading” and Optimistic UI Updates in React using Promises and setState](/Loading-and-Optimistic-UI-Updates-in-React-using-Promises-and-setState)._
+
 > They aren’t suited for every use case, but selectively making use of optimistic UI updates throughout your application can have a big impact on the quality of user experience for relatively little cost/complexity!
 
 > _The examples and videos linked to are part of my egghead.io course:_ [**_Optimistic UI Updates in React_** 🔗](https://egghead.io/courses/optimistic-ui-updates-in-react)_. The course is just 25 minutes total, so head on over and check out_ [_the course overview (free)_](https://egghead.io/lessons/react-course-overview-optimistic-ui-updates-in-react) _to get a feel for what the course is all about._
 
-> _📝 Free for a limited time after which an_ [_egghead.io pro subscription_](https://egghead.io/pricing) _is required._
-
-[!Course Overview: Optimistic UI Updates in React[](https://cdn-images-1.medium.com/max/800/1\*UsZoPp0FQM0v63XbGHo2KQ.png)](https://egghead.io/lessons/react-course-overview-optimistic-ui-updates-in-react)
+[![Course Overview: Optimistic UI Updates in React](https://cdn-images-1.medium.com/max/800/1*UsZoPp0FQM0v63XbGHo2KQ.png)](https://egghead.io/lessons/react-course-overview-optimistic-ui-updates-in-react)
 Course Overview: Optimistic UI Updates in React
 
 In this first example, I’m going to break down the process of building a Twitter-like UI where a user can “like” a tweet and dig into the challenges of optimistically updating the UI to reflect:
