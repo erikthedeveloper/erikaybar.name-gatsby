@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Erik Aybar <erikthedeveloper@gmail.com>",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "netlify dev",
     "build": "gatsby build",
     "deploy": "gatsby build && netlify deploy --prod",
     "new-post": "node ./scripts/new-post.js",
