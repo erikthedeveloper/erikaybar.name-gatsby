@@ -6,7 +6,7 @@ tags: ['React', 'egghead.io']
 slug: optimistic-ui-updates-in-react
 ---
 
-[![egghead.io course: Optimistic UI Updates with React](../2019-04-30-Loading--and-Optimistic-UI-Updates-in-React-using-Promises-and-setState/egghead-Optimistic-UI-Update-Course.png)](https://egghead.io/courses/optimistic-ui-updates-in-react)
+[![egghead.io course: Optimistic UI Updates with React](../2019-04-30-optimistic-ui-updates-in-react-using-component-state/egghead-Optimistic-UI-Update-Course.png)](https://egghead.io/courses/optimistic-ui-updates-in-react)
 
 No matter what type of app you’re building, you’re going to need to fetch data, display that data to a user, and enable the user to interact with and update that data. This interaction/updating phase is often asynchronous. This presents you, the developer, an opportunity to provide a range of differing experiences depending on the circumstances.
 
