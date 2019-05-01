@@ -5,16 +5,24 @@ tags: ['React', 'egghead.io']
 slug: optimistic-ui-updates-in-react-using-component-state
 ---
 
-Let’s walk through a step-by-step progression of developing an items list UI with [React](https://reactjs.org/) that displays a list of items and enables deleting them via clicking a button that submits an _\*HTTP request_.
+Let’s walk through a step-by-step progression of developing an items list UI with [React](https://reactjs.org/) that enables deleting each of the items by clicking a button that submits an _\*HTTP request_.
 
-We’ll begin with a bare-bones component that naively doesn’t account for errors or give any indication of loading. Then, we can look at introducing the concepts of “loading” and handling failed requests. Finally, we can refactor towards a more polished feel using optimistic UI updates.
-
-_\*This post is part of 2 of 2. See part 1 here [Optimistic UI Updates in React (part 01)](/optimistic-ui-updates-in-react)._
+We’ll begin with a static UI and first introduce the concept of “loading”. Then we'll handle failed requests before refactoring towards a more polished feel using optimistic UI updates.
 
 To contrast the difference in feel between the _typical loading UI_ and _optimistic update UI_ let’s see the two side-by-side:
 
 ![Side-by-side comparison of a “loading” UI vs. an “optimistic update” UI](https://cdn-images-1.medium.com/max/800/1*nn_QlCD3XztliYxSmG1lSw.gif)
-Side-by-side comparison of a “loading” UI vs. an “optimistic update” UI.
+
+The progression we'll be following is:
+
+1. Build static UI, hardcoding component state
+2. Update state asynchronously using Promise and setState()
+3. Add a “loading” state to indicate request in progress
+4. Account for failed requests and conditionally display errors
+5. Optimistic UI update in React using setState() and closures
+6. Granularly Restore State for Improved Optimistic UI Updates
+
+_\*This post is part of 2 of 2. See part 1 here [Optimistic UI Updates in React (part 01)](/optimistic-ui-updates-in-react)._
 
 > _The examples provided and videos linked to are from the second half of my_ [**_Optimistic UI Updates in React_** _course on egghead.io_](https://egghead.io/courses/optimistic-ui-updates-in-react)_. Head on over and check out_ [_the course overview/preview (free)_](https://egghead.io/lessons/react-course-overview-optimistic-ui-updates-in-react) _to get a feel for what the course is all about._
 
@@ -22,13 +30,13 @@ Side-by-side comparison of a “loading” UI vs. an “optimistic update” UI
 
 ## 1) Build static UI, hardcoding component state
 
-_There is no accompanying video for this section, but I want to highlight it as the first logical step before diving in further._
-
 We’ll begin with a fresh React component (see docs: [React.Component](https://reactjs.org/docs/react-component.html)) and define the data structure that we’ll be working with. We can hardcode this for now right in `render` as `items.` This will be a simple array of objects, each with an “id” and “title” property. Then, we’ll render these as a list of items and add a button with a click handler for each of them (this button will not do anything quite yet).
 
 Next, we will promote our hard-coded `items` to [Component state](https://reactjs.org/docs/faq-state.html) as `state.items` so that we can manipulate and maintain it based on user interactions.
 
-```javascript
+_Example: Rendering static UI and hardcoding component state_
+
+```javascript{3}
 class ItemsList extends React.Component {
   state = {
     items: [{id: 1, title: 'An item' /* ... */}],
@@ -56,7 +64,7 @@ First, we’ll hook up each of the items’ buttons to delete the item on click.
 
 🎬 [_Update state asynchronously in React using Promise and setState()_](https://egghead.io/lessons/react-update-state-asynchronously-in-react-using-promise-and-setstate) _(2:25)_
 
-Example: Hooking up a React component to communicate with an API and update items upon request success using setState()
+_Example: Hooking up a React component to communicate with an API and update items upon request success using setState()_
 
 ```javascript{9-12}
 class ItemsList extends React.Component {
@@ -96,9 +104,9 @@ Rather than leaving our users hanging wondering if their action of clicking the 
 
 🎬 [_Add “loading” to UI for request in progress using setState()_](https://egghead.io/lessons/react-add-a-loading-indicator-to-ui-for-request-in-progress-using-setstate) _(1:02)_
 
-Example: Adding a loading state to keep track of and indicate whether a request is in progress
+_Example: Adding a loading state to keep track of and indicate whether a request is in progress_
 
-```javascript{4,9,15}
+```javascript{4,9,15,22-25}
 class ItemsList extends React.Component {
   state = {
     items: [],
@@ -120,6 +128,7 @@ class ItemsList extends React.Component {
 
   render() {
     const {items, loading} = this.state
+    // This could be a dynamic className or CSS-in-JS based styles
     const loadingStyles = {
       opacity: loading ? 0.6 : 1,
     }
@@ -143,7 +152,7 @@ So far we’ve yet to account for any errors encountered during a request. We ca
 
 🎬 [_Handle rejected promise and display error to users_](https://egghead.io/lessons/react-handle-a-rejected-promise-and-display-error-to-user-using-setstate) _(1:49)_
 
-Example: Handle failed requests in React using setState(). Conditional rendering to display error to user.
+_Example: Handle failed requests in React using setState(). Conditional rendering to display error to user._
 
 ```javascript{5,20-24,34}
 class ItemsList extends React.Component {
@@ -196,7 +205,7 @@ _\*This is a naive solution. Read further to explore a more robust approach. Whi
 
 🎬 [_Optimistic UI update in React using setState()_](https://egghead.io/lessons/react-optimistic-ui-update-in-react-using-setstate) _(3:47)_
 
-Example: Optimistic UI update in React with setState()
+_Example: Optimistic UI update in React with setState()_
 
 ```javascript{8,13,19}
 class ItemsList extends React.Component {
@@ -247,7 +256,7 @@ Our initial, simplified approach may be fine for a number of scenarios, but is n
 
 🎬 [_Restore Target Items in React State for Improved Optimistic UI Updates_](https://egghead.io/lessons/react-restore-target-items-in-react-state-for-improved-optimistic-ui-updates) _(2:57)_
 
-Example: Restore the item which failed individually to avoid incorrectly restoring deleted items.
+_Example: Restore the item which failed individually to avoid incorrectly restoring deleted items._
 
 ```javascript{8,23}
 class ItemsList extends React.Component {
@@ -294,11 +303,11 @@ class ItemsList extends React.Component {
 
 Yes, I know... This could be simplified with hooks https://reactjs.org/docs/hooks-reference.html 😅
 
-This course was released last year, long before hooks in React came to life. I do plan on revisiting this course and updating to highlight how to solve with hooks instead of class components. Overall, the concept is the same except for shuffling around and simplifying a bit. If you're feeling adventurous take a crack at porting over one of the examples and ping me with it [@erikaybar\_](https://twitter.com/erikaybar_)
+This course was released last year, long before hooks in React came to life. I do plan on revisiting the course and updating to highlight how to solve with hooks instead of class components. Overall, the concept is the same except for shuffling around and simplifying a bit. If you're feeling adventurous take a crack at porting over one of the examples and ping me with it [@erikaybar\_](https://twitter.com/erikaybar_)!
 
 ---
 
-If you are looking to further sink your teeth into more extensive and more advanced React video content, I must recommend the 2 recent and very well put together egghead.io courses out from Kent C. Dodds:
+If you are looking to further sink your teeth into more extensive and more advanced React video content, I must recommend the very well put together egghead.io React courses from Kent C. Dodds:
 
 - [The Beginner’s Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs) (~75 minutes of condensed, _free_ React knowledge 🔥)
 - [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns) (Packed with knowledge, requires an egghead.io subscription)
